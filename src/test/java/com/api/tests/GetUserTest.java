@@ -15,13 +15,13 @@ import static org.hamcrest.Matchers.*;
 public class GetUserTest extends BaseTest {
 	@Test(priority = 2)
 	public void testGetUser() {
-	    int existingUserId = 2;
+	    int UserId = 2;
 
 	    given()
 	    .when()
-	            .get("/users/" + existingUserId)
+	            .get("/users/" + UserId)
 	    .then()
 	            .statusCode(200)
-	            .body("data.id", equalTo(existingUserId));
+	            .body("data.id", equalTo(UserId));
 	}
 }
