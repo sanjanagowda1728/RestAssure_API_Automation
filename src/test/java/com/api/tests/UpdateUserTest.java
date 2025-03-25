@@ -16,12 +16,12 @@ public class UpdateUserTest extends BaseTest {
 	@Test(priority = 3)
     public void TestUpdateUser() {
         String requestBody = "{\"name\": \"Jane Doe\", \"job\": \"QA Engineer\"}";
-        int existingUserId = 2;
+        int UserId = 2;
         given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
         .when()
-                .put("/users/" + existingUserId)
+                .put("/users/" + UserId)
         .then()
                 .statusCode(200)
                 .body("name", equalTo("Jane Doe"))
