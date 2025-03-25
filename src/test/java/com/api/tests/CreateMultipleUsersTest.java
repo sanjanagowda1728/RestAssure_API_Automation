@@ -26,7 +26,6 @@ public class CreateMultipleUsersTest extends BaseTest {
 	    .then()
 	            .statusCode(201)
 	            .extract().response();
-
 	    System.out.println("Create Users Response: " + response.asString());
 	}
 
